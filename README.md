@@ -1,3 +1,5 @@
+# IMDB Backend Test
+
 ## Importing data to database
 
 I could make the script to accept input parameters for importing data, but I thought it would be even more comfortable to use just one command to import all necessary data.
@@ -16,7 +18,9 @@ $ npm run start
 ## Environment Versions
 
 Node js: 14.19
+
 npm: 6.14.16
+
 mysql: 8
 
 ## P.S
