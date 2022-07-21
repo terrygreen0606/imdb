@@ -23,6 +23,22 @@ npm: 6.14.16
 
 mysql: 8
 
+## AWS Lambda
+
+https://f21b26zr43.execute-api.ap-south-1.amazonaws.com/dev
+
+This is the root api link for this app deployed.
+
 ## P.S
 
 Didn't make the id field AUTO_INCREMENT, because the csv files already have id field, and those values need to be imported, rather than auto-generation incrementing.
+
+## Debugging
+
+If you have problems importing data complaining about loading local file, just add
+
+```shell
+$ SET GLOBAL local_infile=1;
+```
+
+to line 5 of script.js file

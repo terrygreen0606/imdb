@@ -2,7 +2,6 @@ const db = require("./database");
 
 const checkIfExists = () => {
 	const query = `
-    SET GLOBAL local_infile=1;
     DROP TABLE IF EXISTS movies;
     DROP TABLE IF EXISTS actors;
     DROP TABLE IF EXISTS directors;
