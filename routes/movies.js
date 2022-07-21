@@ -2,6 +2,33 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 
+/**
+ * @swagger
+ * /movies:
+ *   get:
+ *     description: Get paginated movies filtered by director and genre
+ *     parameters:
+ *       - name: page
+ *         description: page number of the result
+ *         required: false
+ *         type: number
+ *       - name: size
+ *         description: page size of the result
+ *         required: false
+ *         type: number
+ *       - name: director
+ *         description: director id
+ *         required: false
+ *         type: number
+ *       - name: genre
+ *         description: genre of the movie
+ *         required: false
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Successful Response of paginated results
+ *
+ */
 router.get("/", (req, res) => {
 	const { page, size, director, genre } = req.query;
 

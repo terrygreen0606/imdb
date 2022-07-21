@@ -2,8 +2,31 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 
+/**
+ * @swagger
+ * /actor_stats/{actorId}:
+ *   get:
+ *     description: Get an actor with necessary fields like id, name, partner info, top_genre, number of movies, etc
+ *     parameters:
+ *       - name: actorId
+ *         description: actor's id
+ *         type: number
+ *         required: true
+ *         in: path
+ *     responses:
+ *       200:
+ *         description: Successful Response of the actor
+ *
+ */
 router.get("/:actorId", (req, res) => {
 	const { actorId } = req.params;
+	if (!actorId || isNaN(actorId)) {
+		return res.status(400).json({
+			success: false,
+			error: "Actor Id not provided or in bad format. Should be number",
+		});
+	}
+
 	const genreQuery = `
 		SELECT actor_id, first_name, last_name,SUM(count_gen) number_of_movies, GROUP_CONCAT(CONCAT(genre,':',count_gen)) number_of_movies_by_genre
 		FROM
