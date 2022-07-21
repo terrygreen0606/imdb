@@ -29,6 +29,10 @@ https://f21b26zr43.execute-api.ap-south-1.amazonaws.com/dev
 
 This is the root api link for this app deployed.
 
+## Unit Testing
+
+Added unit testing for movies api only for demonstration purpose. Can add more if you want.
+
 ## P.S
 
 Didn't make the id field AUTO_INCREMENT, because the csv files already have id field, and those values need to be imported, rather than auto-generation incrementing.
