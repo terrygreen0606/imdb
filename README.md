@@ -29,11 +29,17 @@ npm: 6.14.16
 
 mysql: 8
 
-## AWS Lambda
+## AWS
+
+### Lambda
 
 https://f21b26zr43.execute-api.ap-south-1.amazonaws.com/dev
 
 This is the root api link for this app deployed.
+
+### RDS (Mysql)
+
+Using AWS RDS for mysql
 
 ## Unit Testing
 
