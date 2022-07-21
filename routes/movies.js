@@ -10,18 +10,22 @@ const db = require("../database");
  *     parameters:
  *       - name: page
  *         description: page number of the result
+ *         in: query
  *         required: false
  *         type: number
  *       - name: size
  *         description: page size of the result
+ *         in: query
  *         required: false
  *         type: number
  *       - name: director
  *         description: director id
+ *         in: query
  *         required: false
  *         type: number
  *       - name: genre
  *         description: genre of the movie
+ *         in: query
  *         required: false
  *         type: string
  *     responses:
@@ -63,7 +67,9 @@ router.get("/", (req, res) => {
 			return res.status(500).json({ success: false, error: err });
 		}
 
-		return res.status(200).json({ success: true, result });
+		return res
+			.status(200)
+			.json({ success: true, result, page: pageNumber, size: pageSize });
 	});
 });
 
