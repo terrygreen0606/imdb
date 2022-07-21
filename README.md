@@ -37,6 +37,10 @@ This is the root api link for this app deployed.
 
 ## Unit Testing
 
+```shell
+$ npm run test
+```
+
 Added unit testing for movies api only for demonstration purpose. Can add more if you want.
 
 ## P.S
