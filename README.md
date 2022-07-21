@@ -15,6 +15,12 @@ $ npm run import
 $ npm run start
 ```
 
+Opens the server at http://localhost:4000
+
+## Open Swagger Api
+
+After running server, please go to http://localhost:4000/api-docs/ to see the swagger.
+
 ## Environment Versions
 
 Node js: 14.19
